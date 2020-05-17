@@ -20,6 +20,25 @@ public class LoginPage {//Page Object Modal ==== PageFactory
 	private WebElement pass;
 	@FindBy(xpath = "//*[@id='SubmitLogin']")
 	private WebElement submit;
+	@FindBy(xpath ="//*[id='log out']")
+	private WebElement logout;
+	@FindBy(xpath="//*[class='search']")
+	private WebElement search;
+	
+	//*[@class='right-block']//*[@class='price product-price']== price
+	
+	//*[@class='right-block']//*[@class='product-name']==> product name
+	
+	 public WebElement getsearch(){
+		
+	return 	search;
+	}
+	
+	
+	
+	public WebElement getlogout(){
+		return logout;
+	}
 
 	public WebElement getLogin() {
 		return login;

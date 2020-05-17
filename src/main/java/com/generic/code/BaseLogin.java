@@ -20,14 +20,14 @@ import com.util.Wait;
 
 public class BaseLogin {
 
-	
+	protected static WebDriver driver;
 	
 	public static void getLogin() throws Throwable {
 		
 		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
 		System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
 		Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
-		WebDriver driver = new ChromeDriver();//upcasting
+		driver = new ChromeDriver();//upcasting
 		
 		driver.manage().window().maximize();//maximum or full size
 		driver.manage().deleteAllCookies();
@@ -53,7 +53,6 @@ public class BaseLogin {
 		TakeAppScreenShot.captureScreenShot(driver, "Login success");
 		System.out.println(driver.getTitle());
 		
-		driver.quit();//= all browser tab + Chrome driver
 		
 	}
 
