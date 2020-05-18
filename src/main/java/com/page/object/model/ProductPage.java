@@ -29,7 +29,7 @@ public class ProductPage {
 	@FindBy(xpath = "// *[@class='right-block']//*[@class='price product-price']")//price=5
 	private List<WebElement> allDressPrice;
 	
-	@FindBy(xpath = "//*[@class,'icon-plus']")
+	@FindBy(xpath = "//*[@id='quantity_wanted']")
 	private WebElement quantityinputbox;
 	
 	@FindBy(xpath = "//*[@id='group_1']")
