@@ -8,7 +8,7 @@ public class Highlighter {
 
 	public void getcolor(WebDriver driver, WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver; // type casting polymorphism
-		js.executeScript("arguments[0].setAttribute('style', 'background: blue; border: 2px solid red;');", element);
+		js.executeScript("arguments[0].setAttribute('style', 'background: white; border: 2px solid red;');", element);
 
 	}
 

@@ -41,6 +41,55 @@ public class ProductPage {
 	@FindBy(xpath = "//*[@title='Proceed to checkout']")
 	private WebElement proceedToCheckOut;
 	
+	@FindBy(xpath = "//*[@name='processAddress']")
+	private WebElement addressProceedToCheckOut;
+	
+	
+	@FindBy(xpath = "//*[@name='processCarrier']")
+	private WebElement shippingProceedToCheckOut;
+	@FindBy(xpath = "(//*[@title='Proceed to checkout'])[2]")
+	private WebElement summaryProceedToCheckOut;
+
+	@FindBy(xpath = "//*[@type='checkbox']")
+	private WebElement checkBox;
+	
+	@FindBy(xpath = "//*[@class='payment_module']")
+	private List<WebElement> paymentOptions;
+	
+	@FindBy(xpath = "//*[@class='button btn btn-default button-medium']")
+	private List<WebElement> orderConfirmedBtn;
+	
+	
+	@FindBy(xpath = "//*[@class='box']")
+	private WebElement orderSummary;
+	
+	public WebElement getaddressProceedToCheckOut() {
+		return addressProceedToCheckOut;
+	}
+	
+	public WebElement getshippingProceedToCheckOut() {
+		return shippingProceedToCheckOut;
+	}
+	public WebElement getorderSummary() {
+		return orderSummary;
+	}
+	
+	public List<WebElement> getorderConfirmedBtn() {
+		return orderConfirmedBtn;
+	}
+	public List<WebElement> getpaymentOptions() {
+		return paymentOptions;
+	}
+	
+	public WebElement getcheckBox() {
+		return checkBox;
+	}
+	
+	
+	public WebElement getsummaryProceedToCheckOut() {
+		return summaryProceedToCheckOut;
+	}
+	
 	public WebElement getproceedToCheckOut() {
 		return proceedToCheckOut;
 	}
