@@ -1,7 +1,5 @@
 package com.generic.code;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import com.page.object.model.ProductPage;
@@ -38,7 +36,9 @@ public class DressSelectionPage extends BaseLogin {
 		
 		//how to handle drop down in selenium
 		Select select= new Select(pf.getdressSizeDropDown());
-		System.out.println(select.getOptions());
+		select.getOptions().forEach(option->{
+			System.out.println(option.getText());
+		});
 		select.selectByIndex(1);
 		//select.selectByVisibleText("M");
 		//select.selectByValue("2");
